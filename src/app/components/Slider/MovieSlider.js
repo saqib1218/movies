@@ -30,27 +30,25 @@ export default function MovieSlider() {
         }}
       />
       <Box className="slider-container">
-        <Swiper
-          spaceBetween={-100} /* Increased overlap */
-          slidesPerView={3}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-        >
-          {moviePosters.map((poster, index) => (
-            <SwiperSlide key={index} className="swiper-slide-custom">
-              <Card className="poster-card">
-                <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <Swiper
+  spaceBetween={-100}
+  slidesPerView={3}
+  centeredSlides={true}
+  loop={true}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  modules={[Autoplay]} // Only include Autoplay module now
+>
+  {moviePosters.map((poster, index) => (
+    <SwiperSlide key={index} className="swiper-slide-custom">
+      <Card className="poster-card">
+        <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
+      </Card>
+    </SwiperSlide>
+  ))}
+</Swiper>
       </Box>
     </div>
   );

@@ -5,7 +5,7 @@ import styles from './About.module.css';
 const About = () => {
   const features = [
     {
-      icon: '/assets/images/icon 1.svg',
+      icon: '/assets/images/Icon 1.svg',
       title: 'Wide Selection',
       description: 'Enjoy movie on the every devices Watch your favorite movies on mobiles, Tablets and TV.'
     },

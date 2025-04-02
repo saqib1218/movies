@@ -1,3 +1,11 @@
+/* Updated MovieSlider.css */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .slider-container {
   width: 100%;
   position: relative;
@@ -5,77 +13,96 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1200px; /* Added perspective to container */
 }
 
-/* Swiper Slide Customization */
+/* Slide container */
 .swiper-slide-custom {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
-  height: 90vh;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 60vh;
+  z-index: 1;
 }
 
-/* Center Slide - Bigger & No Tilt */
+/* Center Slide - Dominant */
+.swiper-slide-active {
+  z-index: 10 !important;
+}
+
 .swiper-slide-active .poster-card {
-  width: 100% !important; /* Make center image larger */
-  height: 85vh !important; /* Taller center image */
-  transition: all 0.5s ease-in-out;
-  transform: scale(1.1) rotate(0deg); /* Scale up the center slide */
-  filter: brightness(1);
-}
-
-/* Left & Right Slides - Tilted & Smaller */
-.swiper-slide-custom:not(.swiper-slide-active) .poster-card {
-  width: 65% !important;
-  filter: brightness(0.7); /* Dim non-active slides */
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Left Slide (Taller on the outer side, shorter on the inner side) */
-.swiper-slide-prev .poster-card {
-  height: 70vh !important; /* Taller on the left */
-  transform: perspective(600px) rotateY(15deg) rotateX(-0deg) scale(0.9);
-}
-
-/* Right Slide (Taller on the outer side, shorter on the inner side) */
-.swiper-slide-next .poster-card {
-  height: 60vh !important; /* Shorter on the right */
-  transform: perspective(600px) rotateY(-15deg) rotateX(-0deg) scale(0.9);
-}
-
-/* Movie Poster Styling */
-.poster-card {
+  width: 100% !important;
+  height: 75vh !important;
+  transform: scale(1.2);
   border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure images cover full card without extra white space */
+/* Side Slides - Tilted Inward */
+.swiper-slide-custom:not(.swiper-slide-active) {
+  z-index: 0;
+}
+
+.swiper-slide-custom:not(.swiper-slide-active) .poster-card {
+  width: 60% !important;
+  height: 50vh !important;
+  filter: brightness(0.8);
+  opacity: 0.9;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.swiper-slide-prev .poster-card {
+  transform: perspective(1000px) rotateY(30deg) scale(0.9);
+  transform-origin: right center;
+}
+
+/* Right Slide */
+.swiper-slide-next .poster-card {
+  transform: perspective(1000px) rotateY(-30deg) scale(0.9);
+  transform-origin: left center;
+}
+
+/* Poster Card */
+.poster-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  backface-visibility: hidden; /* Improves 3D rendering */
+}
+
 .poster-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Swiper Pagination */
-.swiper-pagination-bullet {
-  background: white !important;
-  opacity: 0.7 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #ff6347 !important;
-}
-
-/* Swiper Navigation Buttons */
+/* Navigation */
 .swiper-button-prev,
 .swiper-button-next {
   color: white !important;
+  background: rgba(0, 0, 0, 0.4);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  z-index: 20;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #ff6347 !important;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6347 !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
 }

@@ -1,12 +1,13 @@
+// MovieSlider.js (updated)
 "use client";
-
+import Image from "next/image";
 import { Box, Card, CardMedia } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./MovieSlider.css"; // Custom styles
+import "./MovieSlider.css";
 
 const moviePosters = [
   "https://rukminim3.flixcart.com/image/850/1000/poster/q/r/v/posterskart-interstellar-movie-poster-pkis04-medium-original-imaebctvytcgcgcx.jpeg?q=90&crop=false",
@@ -17,28 +18,40 @@ const moviePosters = [
 
 export default function MovieSlider() {
   return (
-    <Box className="slider-container">
-      <Swiper
-        spaceBetween={-60} /* Adjust spacing for overlap */
-        slidesPerView={3}
-        centeredSlides={true}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
+    <div className="slider-wrapper">
+      <Image
+        src="/assets/images/banner.svg"
+        alt="Background"
+        fill
+        style={{
+          objectFit: 'cover',
+          opacity: 0.2,
+          zIndex: -1
         }}
-        pagination={{ clickable: true }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-      >
-        {moviePosters.map((poster, index) => (
-          <SwiperSlide key={index} className="swiper-slide-custom">
-            <Card className="poster-card">
-              <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
-            </Card>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Box>
+      />
+      <Box className="slider-container">
+        <Swiper
+          spaceBetween={-100} /* Increased overlap */
+          slidesPerView={3}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {moviePosters.map((poster, index) => (
+            <SwiperSlide key={index} className="swiper-slide-custom">
+              <Card className="poster-card">
+                <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
+    </div>
   );
 }

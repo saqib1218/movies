@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "title": "Movie 1",
+      "image": "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2019/02/jordan-peele-us-poster.jpg?ssl=1",
+      "trailer": "https://www.youtube.com/watch?v=xyz"
+    },
+    {
+      "id": 2,
+      "title": "Movie 2",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbc9043227789.5e79d27163fbc.jpg",
+      "trailer": "https://www.youtube.com/watch?v=abc"
+    },
+    {
+      "id": 3,
+      "title": "Movie 3",
+      "image": "https://lwlies.com/wp-content/uploads/2020/12/spree-900x0-c-default.jpg",
+      "trailer": "https://www.youtube.com/watch?v=123"
+    },
+    {
+      "id": 4,
+      "title": "Movie 4",
+      "image": "https://upload.wikimedia.org/wikipedia/en/7/7c/Action_Jackson_Poster.jpeg",
+      "trailer": "https://www.youtube.com/watch?v=def"
+    },
+    {
+      "id": 5,
+      "title": "Movie 5",
+      "image": "https://cdn.collider.com/wp-content/uploads/2017/10/star-wars-the-last-jedi-new-poster.jpg",
+      "trailer": "https://www.youtube.com/watch?v=ghi"
+    },
+    {
+      "id": 6,
+      "title": "Movie 6",
+      "image": "https://mir-s3-cdn-cf.behance.net/project_modules/hd/aaa261108050255.5fb629683b2f1.jpg",
+      "trailer": "https://www.youtube.com/watch?v=jkl"
+    },
+    {
+      "id": 7,
+      "title": "Movie 7",
+      "image": "https://preview.redd.it/what-has-happened-to-movie-posters-v0-veyma8wnnhb81.jpg?width=640&crop=smart&auto=webp&s=3155408077eb1f8e3f8c4566b44e51204bc09ba9",
+      "trailer": "https://www.youtube.com/watch?v=mno"
+    },
+    {
+      "id": 8,
+      "title": "Movie 8",
+      "image": "https://m.media-amazon.com/images/I/71jwCBe30hL._AC_SL1000_.jpg",
+      "trailer": "https://www.youtube.com/watch?v=pqr"
+    },
+    {
+      "id": 9,
+      "title": "Movie 9",
+      "image": "https://c8.alamy.com/comp/2F80Y82/a-vintage-b-movie-action-film-poster-code-name-zebra-2F80Y82.jpg",
+      "trailer": "https://www.youtube.com/watch?v=stu"
+    },
+    {
+      "id": 10,
+      "title": "Movie 10",
+      "image": "https://upload.wikimedia.org/wikipedia/en/7/7c/Action_Jackson_Poster.jpeg",
+      "trailer": "https://www.youtube.com/watch?v=vwx"
+    }
+  ]
+  

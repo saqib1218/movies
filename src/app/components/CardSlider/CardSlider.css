@@ -1,0 +1,102 @@
+
+
+.card-slider-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px  ;
+}
+
+.card-slider-container h1 {
+    margin: 0px;
+    color: rgb(255, 187, 0);
+    font-size: 18px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px !important;
+
+}
+
+.left-button {
+    background-color: rgb(255, 187, 0) !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+.right-button {
+    background-color: rgb(255, 187, 0) !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.movies-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    overflow-x: auto;
+    height: fit-content;
+    padding: 0px 30px;
+
+}
+
+.card-slider {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.card-slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.movies-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Full width */
+}
+
+.movies-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+.movies-wrapper > div {
+    margin-right: 10px; /* Space between the movie cards */
+}
+
+.left-button, .right-button {
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.left-button:disabled, .right-button:disabled {
+    background-color: #ccc;
+}
+
+.card-slider h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card Movie styles */
+.card {
+    width: 300px; /* Set the width of each movie card */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

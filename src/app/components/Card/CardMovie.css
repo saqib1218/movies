@@ -1,0 +1,40 @@
+/* MyCard.css */
+.card-movie-main{
+    display: flex;
+    height: 300px;
+    width: 220px;
+    gap: 5px;
+    flex-direction: column;
+    background-color: #000000 !important;
+    border-radius: 10px;
+    border: 1px solid rgb(183, 183, 183) !important;
+    border-radius: 10px !important;
+
+}
+
+.card {
+    max-width: 345px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  .card-button:hover {
+    background-color: #1565c0; /* Darker shade for hover effect */
+  }
+  
+  .card-movie-button{
+    border: 1px solid white !important;
+    border-radius: 10px !important;
+  }
+  .trailer-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+  }

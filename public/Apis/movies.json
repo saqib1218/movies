@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "Movie 1",
+      "image": "https://marketplace.canva.com/EAFTl0ixW_k/1/0/1131w/canva-black-white-minimal-alone-movie-poster-YZ-0GJ13Nc8.jpg",
+      "trailer": "https://www.youtube.com/watch?v=xyz"
+    },
+    {
+      "id": 2,
+      "title": "Movie 2",
+      "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg?ts=1636996180",
+      "trailer": "https://www.youtube.com/watch?v=abc"
+    },
+    {
+      "id": 3,
+      "title": "Movie 3",
+      "image": "https://marketplace.canva.com/EAGPP9thiC0/2/0/1131w/canva-dark-blue-and-brown-movie-poster-3qWITk5Fmy4.jpg",
+      "trailer": "https://www.youtube.com/watch?v=123"
+    },
+    {
+      "id": 4,
+      "title": "Movie 4",
+      "image": "https://i5.walmartimages.com/asr/65e23347-2ccc-4581-9700-581e0ea9c3a8.a808f8889bfa9e368659fbefc5e5dda4.jpeg",
+      "trailer": "https://www.youtube.com/watch?v=def"
+    },
+    {
+      "id": 5,
+      "title": "Movie 5",
+      "image": "https://vgaa.ca/wp-content/uploads/2022/09/pooh-755x1024.jpeg",
+      "trailer": "https://www.youtube.com/watch?v=ghi"
+    },
+    {
+      "id": 6,
+      "title": "Movie 6",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ23aJX04FZZ_1X1ZyR37cblQcjbklUddQfEg&s",
+      "trailer": "https://www.youtube.com/watch?v=jkl"
+    },
+    {
+      "id": 7,
+      "title": "Movie 7",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNyKHOQ8GJCWksYhE4E6m_qgi4viaWxAtJ3pd9T_jhVJ8Az_C8oetZBjv300d6sz0oD4&usqp=CAU",
+      "trailer": "https://www.youtube.com/watch?v=mno"
+    },
+    {
+      "id": 8,
+      "title": "Movie 8",
+      "image": "https://posterhouse.org/wp-content/uploads/2021/05/silence_of_the_lambs_0.jpg",
+      "trailer": "https://www.youtube.com/watch?v=pqr"
+    },
+    {
+      "id": 9,
+      "title": "Movie 9",
+      "image": "https://creativereview.imgix.net/content/uploads/2024/12/AlienRomulus-scaled.jpg?auto=compress,format&q=60&w=729&h=1080",
+      "trailer": "https://www.youtube.com/watch?v=stu"
+    },
+    {
+      "id": 10,
+      "title": "Movie 10",
+      "image": "https://compote.slate.com/images/77440fdf-a599-4fd1-90fc-cc619aa7419d.jpg?crop=590%2C885%2Cx0%2Cy0",
+      "trailer": "https://www.youtube.com/watch?v=vwx"
+    },
+    {
+        "id": 11,
+        "title": "Movie 1",
+        "image": "https://s.yimg.com/ny/api/res/1.2/ntMufhGKM_j_cI0U5jvvyw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTEwMTM-/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/3f35ddd8b121b188e50e346c8fd24028",
+        "trailer": "https://www.youtube.com/watch?v=xyz"
+      },
+      {
+        "id": 12,
+        "title": "Movie 2",
+        "image": "https://i.ebayimg.com/images/g/~YcAAOSwA9Jc2gMJ/s-l400.jpg",
+        "trailer": "https://www.youtube.com/watch?v=abc"
+      },
+      {
+        "id": 13,
+        "title": "Movie 3",
+        "image": "https://i.pinimg.com/736x/93/c4/c8/93c4c8ac622d2dd48846d53ece5b4183.jpg",
+        "trailer": "https://www.youtube.com/watch?v=123"
+      },
+      {
+        "id": 14,
+        "title": "Movie 4",
+        "image": "https://posterspy.com/wp-content/uploads/2016/07/ZX.jpg",
+        "trailer": "https://www.youtube.com/watch?v=def"
+      },
+      {
+        "id": 15,
+        "title": "Movie 5",
+        "image": "https://themarketingbirds.com/wp-content/uploads/2021/04/Lemony-Snickets-Series-of-Unfortunate-Events.jpg",
+        "trailer": "https://www.youtube.com/watch?v=ghi"
+      },
+      {
+        "id": 16,
+        "title": "Movie 6",
+        "image": "https://img.drz.lazcdn.com/static/pk/p/830fb3f7e80a00c4c9663ec83c797270.jpg_720x720q80.jpg",
+        "trailer": "https://www.youtube.com/watch?v=jkl"
+      },
+      {
+        "id": 17,
+        "title": "Movie 7",
+        "image": "https://posterspy.com/wp-content/uploads/2017/04/lowres-480x680.jpg",
+        "trailer": "https://www.youtube.com/watch?v=mno"
+      },
+      {
+        "id": 18,
+        "title": "Movie 8",
+        "image": "https://www.huntlancer.com/wp-content/uploads/2020/07/Beauty-and-the-Beast-Movie-Poster-Art-by-Kyle-Lambert.jpg",
+        "trailer": "https://www.youtube.com/watch?v=pqr"
+      },
+      {
+        "id": 19,
+        "title": "Movie 9",
+        "image": "https://c8.alamy.com/comp/2F80Y82/a-vintage-b-movie-action-film-poster-code-name-zebra-2F80Y82.jpg",
+        "trailer": "https://www.youtube.com/watch?v=stu"
+      },
+      {
+        "id":20,
+        "title": "Movie 10",
+        "image": "https://i.ebayimg.com/images/g/GVwAAOSwXNtnCsMN/s-l1200.jpg",
+        "trailer": "https://www.youtube.com/watch?v=vwx"
+      }
+  ]
+  

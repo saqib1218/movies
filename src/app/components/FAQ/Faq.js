@@ -106,7 +106,7 @@ const FAQ = () => {
               <Typography sx={{ 
                 fontWeight: '500', 
                 color:'white',
-                fontSize: '1.1rem'
+                fontSize: '22px'
               }}>
                 {item.title}
               </Typography>
@@ -117,7 +117,7 @@ const FAQ = () => {
             }}>
               <Typography sx={{ 
                 color: 'white', 
-                fontSize:"0.75rem",
+                fontSize:"18px",
                 lineHeight: '1.6'
               }}>
                 {item.content}

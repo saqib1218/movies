@@ -6,23 +6,23 @@ const About = () => {
   const features = [
     {
       icon: '/assets/images/Icon 1.svg',
-      title: 'Wide Selection',
-      description: 'Enjoy movie on the every devices Watch your favorite movies on mobiles, Tablets and TV.'
+      title: 'Enjoy movie on the every devices',
+      description: 'Watch your favorite movies on Mobile, Tablet, TV with Chromecast*, Airplay support*.'
     },
     {
       icon: '/assets/images/icon 2.svg',
-      title: 'High Quality',
-      description: '4K Ultra HD streaming with Dolby Atmos sound'
+      title: 'Manage Device',
+      description: 'You can add or remove device anytime from your Video app manage device tab. If you need more devices, please updrade your plan.'
     },
     {
       icon: '/assets/images/icon 3.svg',
-      title: 'Watch Anywhere',
-      description: 'Stream on all your devices anytime, anywhere'
+      title: 'Easy Payment',
+      description: 'Pay with your VISA, Mastercard, Esewa, Khalti and Apple In app purchase.'
     },
     {
       icon: '/assets/images/icon 4.svg',
-      title: '24/7 Support',
-      description: 'Our team is always ready to help you'
+      title: 'Watch from Everywhere',
+      description: 'It is available for global customer but charges and fees may different due to the taxation system of each country.'
     }
   ];
 

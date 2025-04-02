@@ -39,7 +39,7 @@ max-width: 1280px;
     background-color: transparent !important;
     border: 1px solid grey;
     border-radius: 12px !important;
-    padding: 1.5rem;
+    padding: 0.5rem !important;
     box-shadow: none;
     /* transition: transform 0.3s ease; */
     width: 250px;
@@ -57,14 +57,14 @@ max-width: 1280px;
 }
   
   .title {
-    margin: 1rem 0 0.5rem;
+    margin:  0.5rem !important;
     font-weight: bold;
-    font-size: 1rem !important;
+    font-size:22px !important;
     color: white !important;
   }
 
   
   .description {
     color: white !important;
-    font-size: 0.75rem !important;
+    font-size:18px !important;
   }

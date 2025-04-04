@@ -1,15 +1,19 @@
+"use client";
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, Stack } from '@mui/material';
+import { Box, Container, Grid, Typography, Link, Stack, useMediaQuery,
+  ThemeProvider,
+  createTheme } from '@mui/material';
 import {
   Facebook,
   Instagram,
   Twitter,
   YouTube,
 } from '@mui/icons-material';
-
+const theme = createTheme();
 const Footer = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down('md')); // Now using theme directly
   return (
-    <Box sx={{display:"flex",justifyContent:"center",marginBottom:"20px"}}>
+    <Box sx={{display:"flex",justifyContent:"center",marginBottom:"20px",  padding: isMobile ? '10px' : '0'}}>
 
   
       <Box   sx={{

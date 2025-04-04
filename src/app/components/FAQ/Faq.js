@@ -1,11 +1,23 @@
 "use client";
-
 import React, { useState } from 'react';
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { 
+  Box, 
+  Typography, 
+  Accordion, 
+  AccordionSummary, 
+  AccordionDetails, 
+  useMediaQuery,
+  ThemeProvider,
+  createTheme 
+} from '@mui/material';
 import { Add as AddIcon, Remove as RemoveIcon } from '@mui/icons-material';
+
+// Create a default theme
+const theme = createTheme();
 
 const FAQ = () => {
   const [expanded, setExpanded] = useState(null);
+  const isMobile = useMediaQuery(theme.breakpoints.down('md')); // Now using theme directly
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : null);
@@ -41,7 +53,7 @@ const FAQ = () => {
 
   return (
     <Box sx={{
-      minHeight: '100vh',
+      marginBottom:"40px",
       display:"flex",
       justifyContent:"center",
     
@@ -50,8 +62,10 @@ const FAQ = () => {
         <Box
          sx={{
             maxWidth:"1280px",
-            width:"100%"
-          }}>
+            width:"100%",
+            padding: isMobile ? '10px' : '0' // Added responsive padding
+          }}
+        >
 
        
       <Typography 

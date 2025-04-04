@@ -8,6 +8,7 @@
     justify-content: space-between;
     max-width:1280px ;
     margin-bottom: 10px;
+    padding: 0;
 }
 
 .card-slider-container h1 {
@@ -104,4 +105,9 @@
 
 .card:hover {
     transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .card-slider-container {
+        padding: 0 10px; /* Only add padding on mobile */
+    }
 }

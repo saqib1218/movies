@@ -13,6 +13,7 @@
   .centerDiv{
 max-width: 1280px;
 width: 100%;
+padding: 0px;
   }
   .heading {
     color: orange;
@@ -69,3 +70,11 @@ width: 100%;
     color: white !important;
     font-size:18px !important;
   }
+  @media (max-width: 768px) {
+    .centerDiv {
+        padding: 10px !important; /* Only add padding on mobile */
+    }
+    .card{
+      width: fit-content;
+    }
+}

@@ -10,10 +10,10 @@
     margin-bottom: 10px;
 }
 
-.card-slider-container .h1 {
+ .h1 {
     margin: 0px;
-    color: rgb(255, 187, 0);
-    font-size: 18px;
+    color: rgb(255, 187, 0) !important;
+    font-size: 18px !important;
 }
 
 .buttons-container {

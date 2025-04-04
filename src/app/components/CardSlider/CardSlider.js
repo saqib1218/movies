@@ -5,10 +5,12 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import './CardSlider.css';  
 import CardMovie from '../Card/CardMovie'; 
+import { motion } from 'framer-motion';
 
 const CardSlider = () => {
     const [movies, setMovies] = useState([]);
     const [count, setCount] = useState(0);
+    const [isInView, setIsInView] = useState(false);
 
     // Fetch data from JSON file
     useEffect(() => {
@@ -41,12 +43,39 @@ const CardSlider = () => {
 
     // Handle Left Button Click
     const handlePrevClick = () => {
-        setCount(count > 0 ? count - 1 : count); // Prevent going negative
+        setCount(prev => Math.max(0, prev - 1));
     };
 
     // Handle Right Button Click
     const handleNextClick = () => {
-        setCount(count + 1);
+        setCount(prev => prev + 1);
+    };
+
+    // Animation variants
+    const containerVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: "easeInOut",
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.2,
+                ease: "easeInOut"
+            }
+        }
     };
 
     // Edge case for empty movies data
@@ -55,36 +84,57 @@ const CardSlider = () => {
     }
 
     return (
-        <div className="card-slider">
+        <motion.div 
+            className="card-slider"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            onViewportEnter={() => setIsInView(true)}
+            onViewportLeave={() => setIsInView(false)}
+            viewport={{ margin: "-100px" }}
+            variants={containerVariants}
+        >
             <div className="card-slider-container">
-                <h1>Film Ghar Collection</h1>
-                <div className="buttons-container">
+                <motion.h1 variants={itemVariants}>Film Ghar Collection</motion.h1>
+                <motion.div className="buttons-container" variants={itemVariants}>
                     <IconButton
                         className="left-button"
                         onClick={handlePrevClick}
-                        disabled={count <= 0} // Disable left button at the beginning
+                        disabled={count <= 0}
                         aria-label="Previous Movie"
+                        component={motion.button}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         <ArrowLeftIcon />
                     </IconButton>
                     <IconButton
                         className="right-button"
                         onClick={handleNextClick}
-                        disabled={count + moviesPerPage >= movies.length} // Disable right button at the end
+                        disabled={count + moviesPerPage >= movies.length}
                         aria-label="Next Movie"
+                        component={motion.button}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         <ArrowRightIcon />
                     </IconButton>
-                </div>
+                </motion.div>
             </div>
+            
+            {/* Removed AnimatePresence and exit animations */}
             <div className="movies-container">
                 <div className="movies-wrapper">
                     {displayedMovies.map((movie) => (
-                        <CardMovie key={movie.id} movie={movie} />
+                        <motion.div 
+                            key={movie.id}
+                            variants={itemVariants}
+                        >
+                            <CardMovie movie={movie} />
+                        </motion.div>
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

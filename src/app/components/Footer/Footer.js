@@ -25,7 +25,7 @@ const Footer = () => {
           <Stack direction="row" spacing={2}>
             <Box
               component="img"
-              src="/assets/images/P-store-logo.svg"
+              src="/assets/images/p-store-logo.svg"
               alt="Get it on Google Play"
               sx={{ height: 40 }}
             />

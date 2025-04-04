@@ -33,13 +33,14 @@ export default function MovieSlider() {
       />
       <Box className="slider-container">
         <Swiper
-          spaceBetween={isMobile ? 0 : -100}
+          spaceBetween={isMobile ? 0 : -70}
           slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
           centeredSlides={!isMobile}
           loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+          
           }}
           modules={[Autoplay]}
         >

@@ -29,7 +29,7 @@ const About = () => {
   return (
     <Box className={styles.container}>
       <Box className={styles.centerDiv}>
-        <Typography variant="h2" component="h1" className={styles.heading}>
+        <Typography variant="h2" sx={{fontWeight:"bold"}} className={styles.heading}>
           Why Choose Film Ghar?
         </Typography>
 

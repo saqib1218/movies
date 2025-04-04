@@ -49,7 +49,7 @@ const FAQ = () => {
     }}>
         <Box
          sx={{
-            maxWidth:"1100px",
+            maxWidth:"1280px",
             width:"100%"
           }}>
 
@@ -60,8 +60,8 @@ const FAQ = () => {
           color: 'orange',
           fontWeight: 'bold',
       
-          marginBottom: '3rem',
-          fontSize:"1.3rem"
+          marginBottom: '2rem',
+          fontSize:"18px"
         }}
       >
         Frequently Asked Questions

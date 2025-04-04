@@ -6,7 +6,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 70px  ;
+   max-width: 1280px;
+   margin-bottom: 10px;
 }
 
 .card-slider-container h1 {
@@ -38,14 +39,18 @@
     gap: 30px;
     overflow-x: auto;
     height: fit-content;
-    padding: 0px 30px;
+    padding: 0px 10px;
 
 }
 
 .card-slider {
     position: relative;
-    padding: 20px;
+    padding: 0px;
     width: 100%;
+    margin-bottom: 4rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-slider-container {

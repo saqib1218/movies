@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { IconButton } from '@mui/material';
+import { IconButton,Typography } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import './MostWatched.css';  
@@ -33,7 +33,7 @@ const MostWatched = () => {
     return (
         <div className="card-slider">
             <div className="card-slider-container">
-                <h1>Most Watched Film Ghar</h1>
+            <Typography variant="h5" component="h3" className="h1">Most Watched Film Ghar</Typography>
                 <div className="buttons-container">
                     <IconButton
                         className="left-button"

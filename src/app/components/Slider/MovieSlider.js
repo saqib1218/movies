@@ -1,12 +1,10 @@
-// MovieSlider.js (updated)
+// MovieSlider.js (updated responsive version)
 "use client";
 import Image from "next/image";
-import { Box, Card, CardMedia } from "@mui/material";
+import { Box, Card, CardMedia, useMediaQuery, useTheme } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "./MovieSlider.css";
 
 const moviePosters = [
@@ -17,6 +15,10 @@ const moviePosters = [
 ];
 
 export default function MovieSlider() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+
   return (
     <div className="slider-wrapper">
       <Image
@@ -30,25 +32,25 @@ export default function MovieSlider() {
         }}
       />
       <Box className="slider-container">
-      <Swiper
-  spaceBetween={-100}
-  slidesPerView={3}
-  centeredSlides={true}
-  loop={true}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-  }}
-  modules={[Autoplay]} // Only include Autoplay module now
->
-  {moviePosters.map((poster, index) => (
-    <SwiperSlide key={index} className="swiper-slide-custom">
-      <Card className="poster-card">
-        <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
-      </Card>
-    </SwiperSlide>
-  ))}
-</Swiper>
+        <Swiper
+          spaceBetween={isMobile ? 0 : -100}
+          slidesPerView={isMobile ? 1 : isTablet ? 2 : 3}
+          centeredSlides={!isMobile}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+        >
+          {moviePosters.map((poster, index) => (
+            <SwiperSlide key={index} className="swiper-slide-custom">
+              <Card className="poster-card">
+                <CardMedia component="img" image={poster} alt={`Movie ${index + 1}`} />
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
     </div>
   );

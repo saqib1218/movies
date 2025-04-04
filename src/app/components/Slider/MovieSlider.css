@@ -1,4 +1,4 @@
-/* Updated MovieSlider.css - Without Navigation & Pagination */
+/* Updated MovieSlider.css (responsive) */
 .slider-wrapper {
   position: relative;
   width: 100%;
@@ -13,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* perspective: 1200px; */
+  /* padding: 0 20px; */
+  box-sizing: border-box;
 }
 
 /* Slide container */
@@ -33,13 +34,37 @@
 
 .swiper-slide-active .poster-card {
   width: 100% !important;
-  height: 75vh !important;
+  height: 50vh !important;
   transform: scale(1.2);
-  border-radius: 20px !important;
+  border-radius: 22px !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Side Slides - Tilted Inward */
+/* Mobile - single slide */
+@media (max-width: 600px) {
+  .swiper-slide-active .poster-card {
+    transform: scale(1);
+    height: 55vh !important;
+  }
+  
+  .swiper-slide-custom {
+    height: 55vh;
+    padding: 0 10px;
+  }
+}
+
+/* Tablet - two slides */
+@media (min-width: 601px) and (max-width: 960px) {
+  .swiper-slide-active .poster-card {
+    height: 45vh !important;
+  }
+  
+  .swiper-slide-custom:not(.swiper-slide-active) .poster-card {
+    height: 35vh !important;
+  }
+}
+
+/* Side Slides - No border radius */
 .swiper-slide-custom:not(.swiper-slide-active) {
   z-index: 0;
 }
@@ -50,6 +75,7 @@
   filter: brightness(0.8);
   opacity: 0.9;
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 0 !important;
 }
 
 .swiper-slide-prev .poster-card {
@@ -65,11 +91,11 @@
 
 /* Poster Card */
 .poster-card {
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   will-change: transform;
   backface-visibility: hidden;
+  border-radius: 0;
 }
 
 .poster-card img {

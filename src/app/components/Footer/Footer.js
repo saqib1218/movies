@@ -17,20 +17,20 @@ const Footer = () => {
         width:"100%",color:"white"
       }}>
         {/* App Store Badges - Centered Top */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 8 }}>
           <Stack direction="row" spacing={2}>
             <Box
               component="img"
-              src="/assets/images/google.png"
+              src="/assets/images/P-store-logo.svg"
               alt="Get it on Google Play"
               sx={{ height: 40 }}
             />
-            <Box
+            {/* <Box
               component="img"
               src="/assets/images/apple.jpg"
               alt="Download on the App Store"
               sx={{ height: 40 }}
-            />
+            /> */}
           </Stack>
         </Box>
 
@@ -97,9 +97,9 @@ const Footer = () => {
                 >
                   <Box
                     component="img"
-                    src="/assets/images/logo.png"
+                    src="/assets/images/logo-down.svg"
                     alt="Website Logo"
-                    sx={{ height: 40 }}
+                    sx={{ height: 50 }}
                   />
                   <Typography variant="body2" sx={{ fontSize: '16px' }}>
                     © copyright Film Ghar, All rights reserved.

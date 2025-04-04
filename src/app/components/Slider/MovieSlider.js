@@ -1,7 +1,6 @@
-// MovieSlider.js (updated responsive version)
 "use client";
 import Image from "next/image";
-import { Box, Card, CardMedia, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Card, CardMedia, useMediaQuery, useTheme, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -31,6 +30,38 @@ export default function MovieSlider() {
           zIndex: -1
         }}
       />
+      
+      {/* Header with logo and sign-in button */}
+      <Box sx={{
+        maxWidth: '1280px',
+        width: '100%',
+        margin: '0 auto',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '20px 0px',
+        boxSizing: 'border-box'
+      }}>
+        <Image 
+          src="/assets/images/logo.svg" 
+          alt="Film Ghar Logo"
+          width={120}
+          height={50}
+        />
+        <Button 
+          variant="contained" 
+          color="error"
+          startIcon={<Image src="/assets/images/login.svg" width={16} height={16} alt="Sign In" />}
+          sx={{
+            borderRadius: '20px',
+            textTransform: 'none',
+            padding: '8px 16px'
+          }}
+        >
+          Sign In
+        </Button>
+      </Box>
+
       <Box className="slider-container">
         <Swiper
           spaceBetween={isMobile ? 0 : -70}
@@ -40,7 +71,6 @@ export default function MovieSlider() {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
-          
           }}
           modules={[Autoplay]}
         >

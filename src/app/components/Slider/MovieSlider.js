@@ -26,7 +26,7 @@ export default function MovieSlider() {
         fill
         style={{
           objectFit: 'cover',
-          opacity: 0.2,
+          opacity: 0.6,
           zIndex: -1
         }}
       />

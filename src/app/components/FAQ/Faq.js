@@ -83,12 +83,22 @@ const FAQ = () => {
               border: '1px solid grey',
               boxShadow: 'none',
               background: 'transparent',
+              borderTopLeftRadius: '16px !important',
+                borderTopRightRadius: '16px !important',
+                borderBottomLeftRadius:"16px !important",
+                borderBottomRightRadius:"16px !important",
               '&:before': {
-                display: 'none'
+                display: 'none',
+                borderRadius: '16px !important',
+               
               },
               '&.Mui-expanded': {
-                margin: '16px 16px'
-              }
+                margin: '16px 0px',
+                borderRadius: '16px !important',
+               
+                 
+
+              },
             }}
           >
             <AccordionSummary

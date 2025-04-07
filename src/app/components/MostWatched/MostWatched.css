@@ -34,6 +34,7 @@
 }
 
 .movies-container {
+    max-width: 1380px;
     display: flex;
     flex-direction: row;
     gap: 30px;

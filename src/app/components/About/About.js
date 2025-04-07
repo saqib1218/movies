@@ -41,7 +41,7 @@ const About = () => {
                   <img 
                     src={feature.icon} 
                     alt={feature.title}
-                    className={styles.icon}
+                    className={`${styles.icon} ${index === 0 ? styles.firstIcon : ''}`}
                   />
                   <Typography variant="h5" component="h3" className={styles.title}>
                     {feature.title}

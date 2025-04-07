@@ -142,7 +142,8 @@ const FAQ = () => {
               <Typography sx={{ 
                 color: 'white', 
                 fontSize:"18px",
-                lineHeight: '1.6'
+                lineHeight: '1.6',
+                marginBottom:"20px"
               }}>
                 {item.content}
               </Typography>

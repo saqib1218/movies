@@ -19,6 +19,9 @@ export default function MovieSlider() {
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
 
   return (
+    <div className="main-div">
+
+    
     <div className="slider-wrapper">
       <Image
         src="/assets/images/banner.svg"
@@ -27,7 +30,7 @@ export default function MovieSlider() {
         style={{
           objectFit: 'cover',
           opacity: 0.6,
-          zIndex: -1
+          zIndex: -1,
         }}
       />
       
@@ -83,6 +86,7 @@ export default function MovieSlider() {
           ))}
         </Swiper>
       </Box>
+    </div>
     </div>
   );
 }

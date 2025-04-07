@@ -93,7 +93,7 @@ const CardSlider = () => {
             viewport={{ margin: "-100px" }}
             variants={containerVariants}
         >
-            <div className="card-slider-container">
+            <div className="card-slider-container" style={{marginTop:"-10rem"}}>
                 <motion.h1 variants={itemVariants}>Film Ghar Collection</motion.h1>
                 <motion.div className="buttons-container" variants={itemVariants}>
                     <IconButton

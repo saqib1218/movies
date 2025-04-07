@@ -57,6 +57,12 @@ padding: 0px;
     margin-bottom: 1rem;
     
 }
+.firstIcon {
+  width: 100px;
+  height: 90px;
+  /* margin-bottom: 0.5rem; */
+ 
+}
   
   .title {
     margin:  0.5rem !important;

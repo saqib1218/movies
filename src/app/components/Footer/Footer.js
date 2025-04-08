@@ -25,13 +25,13 @@ const Footer = () => {
           <Stack direction="row" spacing={2}>
             <Box
               component="img"
-              src="/assets/images/gogle.png"
+              src="/assets/images/googleplay.svg"
               alt="Get it on Google Play"
               sx={{ height: 40 }}
             />
             <Box
               component="img"
-              src="/assets/images/aple.png"
+              src="/assets/images/appstore.svg"
               alt="Download on the App Store"
               sx={{ height: 40 }}
             />
